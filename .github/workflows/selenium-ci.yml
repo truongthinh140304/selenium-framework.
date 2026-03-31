@@ -25,6 +25,7 @@ jobs:
       - name: Chạy Selenium Tests
         run: mvn clean test -Dbrowser=chrome -Denv=dev -DsuiteXmlFile=testng-smoke.xml
         env:
+          CI: true
           APP_PASSWORD: ${{ secrets.SAUCEDEMO_PASSWORD }}
 
       - name: Lưu kết quả test
